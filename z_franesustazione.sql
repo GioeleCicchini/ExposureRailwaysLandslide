@@ -10,13 +10,13 @@ AS $$
 
 		 CREATE TABLE frane_su_stazione (
       id SERIAL,
-      geom geometry(Polygon),
+      geom geometry,
       id_voronoi_polgyon INTEGER
     );
 
 		CREATE TABLE impact_voroni_on_station (
 			id INTEGER,
-			geom geometry(Polygon),
+			geom geometry,
 			szk FLOAT
 		);
 
