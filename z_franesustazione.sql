@@ -19,7 +19,7 @@ AS $$
 
 		SELECT st_buffer(geom, 100) INTO stationBuffer FROM railway_stations WHERE gid = stationid;
 
-		FOR frana IN SELECT * FROM ret LOOP
+		FOR frana IN (SELECT * FROM ret) LOOP
 			IF st_intersects(stationBuffer, frana.geom) THEN
 				INSERT INTO frane_su_stazione (geom, id_voronoi_polgyon) VALUES (frana.geom, frana.id_voronoi_polgyon);
 				INSERT INTO impact_voroni_on_station (SELECT id, geom FROM nearstationpolygons WHERE id = frana.id_voronoi_polgyon);
