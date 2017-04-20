@@ -16,6 +16,7 @@ AS $$
     PERFORM z_linemergeisoipse();
 
     PERFORM linearregression(station.gid);
+    PERFORM z_franesustatione(station.gid);
     --DROP TABLE IF EXISTS nearstationpolygons;
     --DROP TABLE IF EXISTS isoipsenearstation;
 
