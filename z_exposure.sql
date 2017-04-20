@@ -7,7 +7,7 @@ AS $$
 
     DROP TABLE IF EXISTS nearstationpolygons;
     DROP TABLE IF EXISTS isoipsenearstation;
-
+    DROP TABLE IF EXISTS ret;
 
 
     FOR station IN SELECT * FROM railway_stations where gid=idStazione LOOP
@@ -17,6 +17,7 @@ AS $$
 
     PERFORM linearregression(station.gid);
     PERFORM z_franesustazione(station.gid);
+    PERFORM z_distancetolandslide(station.gid);
     --DROP TABLE IF EXISTS nearstationpolygons;
     --DROP TABLE IF EXISTS isoipsenearstation;
 

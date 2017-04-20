@@ -5,6 +5,8 @@ AS $$
 		frana RECORD;
 		stationBuffer geometry;
   BEGIN
+		DROP TABLE IF EXISTS impact_voroni_on_station;
+		DROP TABLE IF EXISTS frane_su_stazione;
 
 		 CREATE TABLE frane_su_stazione (
       id SERIAL,
@@ -14,7 +16,8 @@ AS $$
 
 		CREATE TABLE impact_voroni_on_station (
 			id INTEGER,
-			geom geometry(Polygon)
+			geom geometry(Polygon),
+			szk FLOAT
 		);
 
 		SELECT st_buffer(geom, 100) INTO stationBuffer FROM railway_stations WHERE gid = stationid;
@@ -22,7 +25,7 @@ AS $$
 		FOR frana IN (SELECT * FROM ret) LOOP
 			IF st_intersects(stationBuffer, frana.geom) THEN
 				INSERT INTO frane_su_stazione (geom, id_voronoi_polgyon) VALUES (frana.geom, frana.id_voronoi_polgyon);
-				INSERT INTO impact_voroni_on_station (SELECT id, geom FROM nearstationpolygons WHERE id = frana.id_voronoi_polgyon);
+				INSERT INTO impact_voroni_on_station (SELECT id, geom, szk FROM nearstationpolygons WHERE id = frana.id_voronoi_polgyon);
 			END IF;
 		END LOOP;
 	END;
