@@ -10,6 +10,8 @@ AS $$
     DROP TABLE IF EXISTS frane_su_stazione;
     DROP TABLE IF EXISTS impact_voroni_on_station;
     DROP TABLE IF EXISTS ret;
+    DROP TABLE IF EXISTS impact_voroni_on_station;
+    DROP TABLE IF EXISTS frane_su_stazione;
 
 
     FOR station IN SELECT * FROM railway_stations where gid=idStazione LOOP
@@ -20,9 +22,7 @@ AS $$
 
     PERFORM linearregression(station.gid);
     PERFORM z_franesustazione(station.gid);
-   PERFORM z_distancetolandslide(station.gid);
-
-
+    PERFORM z_distancetolandslide(station.gid);
 
 
     END LOOP;
