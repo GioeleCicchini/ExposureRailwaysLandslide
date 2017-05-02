@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.2.8)  2 MAY 2017 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.2.8)  2 MAY 2017 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -578,6 +578,24 @@ LaTeX Font Info:    Try loading font information for OT1+phv on input line 80.
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
+LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 85.
+
+
+LaTeX Warning: Citation `Turk1996' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `Jobard1997' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `Cabral1993' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `Laidlaw2001' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `Ware2008' on page 1 undefined on input line 91.
+
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pnc/b/n' tried instead on input line 124.
 
@@ -613,11 +631,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
  [2]
+
+LaTeX Warning: Citation `Hubel1962' on page 3 undefined on input line 218.
+
+
+LaTeX Warning: Citation `Hubel1968' on page 3 undefined on input line 218.
+
+
+LaTeX Warning: Citation `Li1998a' on page 3 undefined on input line 227.
+
+
+LaTeX Warning: Citation `Laidlaw2001' on page 3 undefined on input line 238.
+
+
+LaTeX Warning: Citation `Li1998a' on page 3 undefined on input line 245.
+
+
+LaTeX Warning: Citation `Laidlaw2001' on page 3 undefined on input line 250.
+
 <acmlarge-mouse.pdf, id=18, 151.56625pt x 134.5025pt>
 File: acmlarge-mouse.pdf Graphic file (type pdf)
  <use acmlarge-mouse.pdf>
 Package pdftex.def Info: acmlarge-mouse.pdf used on input line 257.
 (pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+
+
+LaTeX Warning: Citation `Daugman1985' on page 3 undefined on input line 278.
+
 
 Overfull \hbox (1.56622pt too wide) has occurred while \output is active
 [] \OT1/phv/m/n/9 Algoritmo per il calcolo dell'esposizione al rischio di frane
@@ -629,10 +669,32 @@ Overfull \vbox (0.57443pt too high) has occurred while \output is active []
 
 
 [3]
+
+LaTeX Warning: Citation `Hubel1962' on page 4 undefined on input line 285.
+
+
+LaTeX Warning: Citation `Hubel1968' on page 4 undefined on input line 285.
+
+
+LaTeX Warning: Citation `Field1993' on page 4 undefined on input line 301.
+
 File: acmlarge-mouse.pdf Graphic file (type pdf)
- <use acmlarge-mouse.pdf>
+<use acmlarge-mouse.pdf>
 Package pdftex.def Info: acmlarge-mouse.pdf used on input line 315.
 (pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+
+
+LaTeX Warning: Citation `Hubel1962' on page 4 undefined on input line 324.
+
+
+LaTeX Warning: Citation `Hubel1968' on page 4 undefined on input line 324.
+
+
+LaTeX Warning: Citation `Field1993' on page 4 undefined on input line 325.
+
+
+LaTeX Warning: Citation `Li1998a' on page 4 undefined on input line 329.
+
 
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
@@ -642,15 +704,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--363
  []
 
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <9> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 374.
-LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 380.
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 376.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 380.
+(Font)              <9> on input line 382.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <7> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 385.
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 387.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <6.25002> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 385.
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 387.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -665,33 +725,54 @@ Overfull \vbox (0.57443pt too high) has occurred while \output is active []
 
 
 [5]
+
+LaTeX Warning: Citation `Pineo2008' on page 6 undefined on input line 451.
+
+
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
  [6]
-File: acmlarge-mouse.pdf Graphic file (type pdf)
 
+LaTeX Warning: Citation `Laidlaw2001' on page 7 undefined on input line 466.
+
+
+LaTeX Warning: Citation `Turk1996' on page 7 undefined on input line 469.
+
+
+LaTeX Warning: Citation `Cabral1993' on page 7 undefined on input line 471.
+
+
+LaTeX Warning: Citation `Ware2008' on page 7 undefined on input line 474.
+
+
+LaTeX Warning: Citation `Jobard1997' on page 7 undefined on input line 476.
+
+
+LaTeX Warning: Citation `Fowler1989' on page 7 undefined on input line 478.
+
+File: acmlarge-mouse.pdf Graphic file (type pdf)
 <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 481.
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 483.
 (pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
 File: acmlarge-mouse.pdf Graphic file (type pdf)
  <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 488.
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 490.
 (pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
 
-Overfull \hbox (3.39197pt too wide) in paragraph at lines 479--492
+Overfull \hbox (3.39197pt too wide) in paragraph at lines 481--494
 [][]   [] 
  []
 
 File: acmlarge-mouse.pdf Graphic file (type pdf)
 <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 497.
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 499.
 (pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
 File: acmlarge-mouse.pdf Graphic file (type pdf)
  <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 504.
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 506.
 (pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
 
-Overfull \hbox (3.39197pt too wide) in paragraph at lines 495--508
+Overfull \hbox (3.39197pt too wide) in paragraph at lines 497--510
 [][]   [] 
  []
 
@@ -706,9 +787,106 @@ Overfull \vbox (0.57443pt too high) has occurred while \output is active []
 
 
 [7]
+
+LaTeX Warning: Citation `Laidlaw2001' on page 8 undefined on input line 573.
+
+
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
  [8]
+
+LaTeX Warning: Citation `Li1998a' on page 9 undefined on input line 607.
+
+
+LaTeX Warning: Citation `Abril07' on page 9 undefined on input line 625.
+
+
+LaTeX Warning: Citation `Cohen07' on page 9 undefined on input line 626.
+
+
+LaTeX Warning: Citation `JCohen96' on page 9 undefined on input line 626.
+
+
+LaTeX Warning: Citation `Kosiur01' on page 9 undefined on input line 627.
+
+
+LaTeX Warning: Citation `Harel79' on page 9 undefined on input line 628.
+
+
+LaTeX Warning: Citation `Editor00' on page 9 undefined on input line 628.
+
+
+LaTeX Warning: Citation `Editor00a' on page 9 undefined on input line 630.
+
+
+LaTeX Warning: Citation `Spector90' on page 9 undefined on input line 631.
+
+
+LaTeX Warning: Citation `Douglass98' on page 9 undefined on input line 632.
+
+
+LaTeX Warning: Citation `Knuth97' on page 9 undefined on input line 632.
+
+
+LaTeX Warning: Citation `Andler79' on page 9 undefined on input line 634.
+
+
+LaTeX Warning: Citation `Smith10' on page 9 undefined on input line 635.
+
+
+LaTeX Warning: Citation `VanGundy07' on page 9 undefined on input line 636.
+
+
+LaTeX Warning: Citation `Harel78' on page 9 undefined on input line 637.
+
+
+LaTeX Warning: Citation `Clarkson85' on page 9 undefined on input line 637.
+
+
+LaTeX Warning: Citation `anisi03' on page 9 undefined on input line 638.
+
+
+LaTeX Warning: Citation `Thornburg01' on page 9 undefined on input line 638.
+
+
+LaTeX Warning: Citation `Ablamowicz07' on page 9 undefined on input line 638.
+
+
+LaTeX Warning: Citation `Poker06' on page 9 undefined on input line 639.
+
+
+LaTeX Warning: Citation `Obama08' on page 9 undefined on input line 639.
+
+
+LaTeX Warning: Citation `Novak03' on page 9 undefined on input line 639.
+
+
+LaTeX Warning: Citation `Lee05' on page 9 undefined on input line 640.
+
+
+LaTeX Warning: Citation `JoeScientist001' on page 9 undefined on input line 640
+.
+
+
+LaTeX Warning: Citation `rous08' on page 9 undefined on input line 641.
+
+
+LaTeX Warning: Citation `SaeediMEJ10' on page 9 undefined on input line 642.
+
+
+LaTeX Warning: Citation `SaeediJETC10' on page 9 undefined on input line 642.
+
+
+LaTeX Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 9 undefine
+d on input line 643.
+
+
+LaTeX Warning: Citation `MR781536' on page 9 undefined on input line 645.
+
+
+LaTeX Warning: Citation `MR781537' on page 9 undefined on input line 645.
+
+
 Overfull \hbox (1.56622pt too wide) has occurred while \output is active
 [] \OT1/phv/m/n/9 Algoritmo per il calcolo dell'esposizione al rischio di frane
  applicato alle stazioni e linee ferroviarie abruzzesi [] 1:9
@@ -718,44 +896,18 @@ Overfull \hbox (1.56622pt too wide) has occurred while \output is active
 Overfull \vbox (0.57443pt too high) has occurred while \output is active []
 
 
-[9] (./v2-acmlarge-sample.bbl
-Underfull \hbox (badness 2285) in paragraph at lines 158--164
-[]\OT1/pnc/m/n/8 Ian Edi-tor (Ed.). 2008.  \OT1/pnc/m/it/8 The ti-tle of book t
-wo \OT1/pnc/m/n/8 (2nd. ed.).  Uni-ver-si-ty of Chi-ca-go Press, Chi-ca-go, Cha
-p-ter 100.
- []
-
-
+[9] (./v2-acmlarge-sample.bbl)
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
  [10]
-Underfull \hbox (badness 4132) in paragraph at lines 374--382
-[]\OT1/pnc/m/n/8 Daniel Pi-neo and Co-lin Ware. 2008.  Neu-ral mo-de-ling of fl
-ow ren-de-ring ef-fec-ti-ve-ness. In \OT1/pnc/m/it/8 Pro-cee-dings of the
- []
-
-
-Underfull \hbox (badness 1924) in paragraph at lines 374--382
-\OT1/pnc/m/it/8 5th Sym-po-sium on Ap-plied Per-cep-tion in Gra-phics and Vi-su
-a-li-za-tion (APGV'08)\OT1/pnc/m/n/8 . ACM, New York, NY, 171--178.
- []
-
-)
-Overfull \vbox (0.57443pt too high) has occurred while \output is active []
-
-
-[11]
-Overfull \vbox (0.633pt too high) has occurred while \output is active []
-
- [12]
-LaTeX Font Info:    Try loading font information for OMS+pnc on input line 703.
+LaTeX Font Info:    Try loading font information for OMS+pnc on input line 705.
 
 
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/omspnc.fd
 File: omspnc.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pnc/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 703.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 705.
  [1
 
 ]
@@ -766,8 +918,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  4363 strings out of 493013
- 55227 string characters out of 6136994
- 159550 words of memory out of 5000000
+ 55240 string characters out of 6136994
+ 154033 words of memory out of 5000000
  7819 multiletter control sequences out of 15000+600000
  33779 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -784,17 +936,16 @@ cmmi9.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 /type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy5.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2016/texmf-dist/fonts/
-type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/ncntr
-sbk/uncb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
-<c:/texlive/2016/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on v2-acmlarge-sample.pdf (13 pages, 250608 bytes).
+7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2016/texmf-d
+ist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1
+/urw/ncntrsbk/uncb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/ncntrsbk/u
+ncr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on v2-acmlarge-sample.pdf (11 pages, 232583 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
