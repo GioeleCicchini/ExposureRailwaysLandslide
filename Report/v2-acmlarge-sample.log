@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.7.27)  2 MAY 2017 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.7.27)  2 MAY 2017 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,8 +235,81 @@ LaTeX Font Info:    Try loading font information for OT1+phv on input line 75.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
+Missing character: There is no â in font pncr7t!
+Missing character: There is no € in font pncr7t!
+Missing character: There is no ™ in font pncr7t!
+Missing character: There is no â in font pncr7t!
+Missing character: There is no € in font pncr7t!
+Missing character: There is no ™ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no ¨ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no ¹ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no ¨ in font pncr7t!
+Missing character: There is no â in font pncr7t!
+Missing character: There is no € in font pncr7t!
+Missing character: There is no ™ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no   in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no   in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no ¨ in font pncr7t!
+Missing character: There is no â in font pncr7t!
+Missing character: There is no € in font pncr7t!
+Missing character: There is no ™ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no   in font pncr7t!
+Missing character: There is no â in font pncr7t!
+Missing character: There is no € in font pncr7t!
+Missing character: There is no ™ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no ¨ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no   in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no   in font pncr7t!
+Missing character: There is no â in font pncr7t!
+Missing character: There is no € in font pncr7t!
+Missing character: There is no ™ in font pncr7t!
+Missing character: There is no Ã in font pncr7t!
+Missing character: There is no   in font pncr7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 105.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 105.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 105.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 105.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Underfull \hbox (badness 3557) in paragraph at lines 105--105
+[]\OT1/pnc/m/n/8 Objective and com-pu-ta-
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 105--105
+\OT1/pnc/m/n/8 tional mea-sures for de-
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 105--105
+\OT1/pnc/m/n/8 scrib-ing the changes in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+\OT1/pnc/m/n/8 cru-cial im-age qual-ity
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 119.
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 112.
 
 Overfull \vbox (73.96626pt too high) has occurred while \output is active []
 
@@ -246,37 +319,7 @@ Non-PDF special ignored!
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 142.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 142.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 142.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 142.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Underfull \hbox (badness 3557) in paragraph at lines 142--142
-[]\OT1/pnc/m/n/8 Objective and com-pu-ta-
- []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 142--142
-\OT1/pnc/m/n/8 tional mea-sures for de-
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 142--142
-\OT1/pnc/m/n/8 scrib-ing the changes in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
-\OT1/pnc/m/n/8 cru-cial im-age qual-ity
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 178.
+(Font)              <7> on input line 132.
 
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
@@ -284,7 +327,12 @@ Overfull \vbox (0.633pt too high) has occurred while \output is active []
 <acmlarge-mouse.pdf, id=18, 151.56625pt x 134.5025pt>
 File: acmlarge-mouse.pdf Graphic file (type pdf)
  <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 252.
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 175.
+(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+File: acmlarge-mouse.pdf Graphic file (type pdf)
+
+<use acmlarge-mouse.pdf>
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 199.
 (pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
@@ -293,16 +341,33 @@ Missing character: There is no ™ in font phvr7t!
 Overfull \vbox (0.57443pt too high) has occurred while \output is active []
 
 
-[3]
-File: acmlarge-mouse.pdf Graphic file (type pdf)
- <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 310.
-(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+[3 <./acmlarge-mouse.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 295.
+LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <9> not available
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 310.
+LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 311.
+
+Underfull \vbox (badness 2689) has occurred while \output is active []
+
 
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
- [4 <./acmlarge-mouse.pdf>]
-Underfull \vbox (badness 2096) has occurred while \output is active []
+ [4]
+File: acmlarge-mouse.pdf Graphic file (type pdf)
+
+<use acmlarge-mouse.pdf>
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 371.
+(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+File: acmlarge-mouse.pdf Graphic file (type pdf)
+ <use acmlarge-mouse.pdf>
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 378.
+(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+
+Overfull \hbox (3.39197pt too wide) in paragraph at lines 369--382
+[][]   [] 
+ []
 
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
@@ -312,46 +377,26 @@ Overfull \vbox (0.57443pt too high) has occurred while \output is active []
 
 
 [5]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 406.
-LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <9> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 421.
-LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 422.
+File: acmlarge-mouse.pdf Graphic file (type pdf)
+ <use acmlarge-mouse.pdf>
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 387.
+(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+File: acmlarge-mouse.pdf Graphic file (type pdf)
+ <use acmlarge-mouse.pdf>
+Package pdftex.def Info: acmlarge-mouse.pdf used on input line 394.
+(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
+
+Overfull \hbox (3.39197pt too wide) in paragraph at lines 385--398
+[][]   [] 
+ []
+
+
+Underfull \vbox (badness 1796) has occurred while \output is active []
+
 
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
  [6]
-File: acmlarge-mouse.pdf Graphic file (type pdf)
-
-<use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 482.
-(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
-File: acmlarge-mouse.pdf Graphic file (type pdf)
- <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 489.
-(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
-
-Overfull \hbox (3.39197pt too wide) in paragraph at lines 480--493
-[][]   [] 
- []
-
-File: acmlarge-mouse.pdf Graphic file (type pdf)
-<use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 498.
-(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
-File: acmlarge-mouse.pdf Graphic file (type pdf)
- <use acmlarge-mouse.pdf>
-Package pdftex.def Info: acmlarge-mouse.pdf used on input line 505.
-(pdftex.def)             Requested size: 151.56587pt x 134.50215pt.
-
-Overfull \hbox (3.39197pt too wide) in paragraph at lines 496--509
-[][]   [] 
- []
-
-
-Underfull \vbox (badness 3219) has occurred while \output is active []
-
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no ™ in font phvr7t!
@@ -359,79 +404,33 @@ Missing character: There is no ™ in font phvr7t!
 Overfull \vbox (0.57443pt too high) has occurred while \output is active []
 
 
-[7]
+[7] (./v2-acmlarge-sample.bbl)
 Overfull \vbox (0.633pt too high) has occurred while \output is active []
 
  [8]
-Missing character: There is no â in font phvr7t!
-Missing character: There is no € in font phvr7t!
-Missing character: There is no ™ in font phvr7t!
-
-Overfull \vbox (0.57443pt too high) has occurred while \output is active []
-
-
-[9] (./v2-acmlarge-sample.bbl
-Underfull \hbox (badness 2285) in paragraph at lines 158--164
-[]\OT1/pnc/m/n/8 Ian Ed-i-tor (Ed.). 2008.  \OT1/pnc/m/it/8 The ti-tle of book 
-two \OT1/pnc/m/n/8 (2nd. ed.).  Uni-ver-sity of Chicago Press, Chicago, Chap-te
-r 100.
- []
-
-
-Overfull \vbox (0.633pt too high) has occurred while \output is active []
-
- [10]
-Underfull \hbox (badness 4132) in paragraph at lines 374--382
-[]\OT1/pnc/m/n/8 Daniel Pi-neo and Colin Ware. 2008.  Neu-ral mod-el-ing of flo
-w ren-der-ing ef-fec-tive-ness. In \OT1/pnc/m/it/8 Pro-ceed-ings of the
- []
-
-
-Underfull \hbox (badness 1924) in paragraph at lines 374--382
-\OT1/pnc/m/it/8 5th Sym-po-sium on Ap-plied Per-cep-tion in Graph-ics and Vi-su
--al-iza-tion (APGV'08)\OT1/pnc/m/n/8 . ACM, New York, NY, 171--178.
- []
-
-Missing character: There is no â in font phvr7t!
-Missing character: There is no € in font phvr7t!
-Missing character: There is no ™ in font phvr7t!
-
-Overfull \hbox (4.57219pt too wide) has occurred while \output is active
-[] \OT1/phv/m/n/9 Algoritmo per il calcolo dellesposizione al rischio di frane 
-applicato alle stazioni e linee ferroviarie abruzzesi [] 1:11
- []
-
-
-Overfull \vbox (0.57443pt too high) has occurred while \output is active []
-
-
-[11])
-Overfull \vbox (0.633pt too high) has occurred while \output is active []
-
- [12]
 Missing character: There is no â in font pncr7t!
 Missing character: There is no € in font pncr7t!
 Missing character: There is no ™ in font pncr7t!
-LaTeX Font Info:    Try loading font information for OMS+pnc on input line 704.
+LaTeX Font Info:    Try loading font information for OMS+pnc on input line 573.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omspnc.fd
 File: omspnc.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pnc/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 704.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 573.
  [1
 
 ]
 (./v2-acmlarge-sample.aux) ) 
 Here is how much of TeX's memory you used:
- 3256 strings out of 493089
- 43649 string characters out of 6134842
- 135903 words of memory out of 5000000
- 6687 multiletter control sequences out of 15000+600000
+ 3215 strings out of 493089
+ 43195 string characters out of 6134842
+ 131420 words of memory out of 5000000
+ 6646 multiletter control sequences out of 15000+600000
  32172 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,19n,26p,740b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,19n,26p,1952b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips
 /base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -445,19 +444,18 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/urw/ncntrsbk/uncri8a.pfb>
-Output written on v2-acmlarge-sample.pdf (13 pages, 248941 bytes).
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on v2-acmlarge-sample.pdf (9 pages, 224505 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
