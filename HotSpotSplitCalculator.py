@@ -7,7 +7,7 @@ clear = lambda: os.system('cls')
 numeroTuple = 115
 media = 0
 try:
-    conn=psycopg2.connect("dbname='Esercizio1' user='postgres' password='af54c1daa'")
+    conn=psycopg2.connect("dbname='AbruzzoGeoSpatial' user='postgres' password='af54c1daa'")
 except:
     print("I am unable to connect to the database.")
 
@@ -23,7 +23,7 @@ for count in id:
 
     try:
         startTime = time.time();
-        quary = "SELECT z_exposure(" + str(count) + ")"
+        quary = "SELECT __exposure(" + str(count) + ")"
         cur.execute(quary)
         conn.commit()
         endTime = time.time()
