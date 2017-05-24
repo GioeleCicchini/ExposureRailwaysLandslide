@@ -4,7 +4,7 @@ import time
 # Try to connect
 
 
-numeroTuple = 115
+numeroTuple = 10
 media = 0
 try:
 
@@ -24,7 +24,7 @@ for count in id:
 
     try:
         startTime = time.time();
-        quary = "SELECT __exposure(" + str(count) + ")"
+        quary = "SELECT __exposure_routes(" + str(count) + ")"
         cur.execute(quary)
         conn.commit()
         endTime = time.time()
