@@ -1,7 +1,7 @@
-CREATE OR REPLACE FUNCTION __LinearRegressionFinder (stationid integer,pdiv INTEGER) RETURNS void
-	LANGUAGE plpgsql
+create function "__linearregressionfinder"(stationid integer, pdiv double precision) returns void
+LANGUAGE plpgsql
 AS $$
-	DECLARE
+DECLARE
     x DOUBLE PRECISION;
     y DOUBLE PRECISION;
     xp DOUBLE PRECISION;
@@ -52,7 +52,9 @@ AS $$
       CREATE TABLE slope_table AS (SELECT st_x(centroid_zoneFragments.centroid_fragments) as x_slope , st_y(centroid_zoneFragments.centroid_fragments) AS y_slope FROM centroid_zoneFragments);
       SELECT regr_slope(slope_table.y_slope, slope_table.x_slope) INTO slope FROM slope_table;
 
-      SELECT (AVG(ST_Perimeter(geom)))/pdiv INTO line_buffer_size FROM zonefragments WHERE id_zone = id_zone_var;
+      --SELECT (AVG(ST_Perimeter(geom)))/pdiv INTO line_buffer_size FROM zonefragments WHERE id_zone = id_zone_var;
+
+      SELECT (ST_Perimeter(geom))/pdiv INTO line_buffer_size FROM nearestzones WHERE id = id_zone_var;
 
       x:= 2503811;
       y:= yp + slope*(x - xp);
@@ -74,4 +76,4 @@ AS $$
 
 
 	END;
-$$
+$$;

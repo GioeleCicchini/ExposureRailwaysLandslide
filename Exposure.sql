@@ -1,4 +1,4 @@
-create OR REPLACE function "__exposure"(id_point integer) returns void
+create or REPLACE function "__exposure"(id_point integer) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
@@ -12,18 +12,18 @@ DECLARE
     DROP TABLE IF EXISTS hazardzones;
     DROP TABLE IF EXISTS landslide;
 
-
+    DROP TABLE IF EXISTS points;
     CREATE TABLE points AS (SELECT * FROM railway_stations);
+    --CREATE TABLE points AS (SELECT * FROM route_points);
 
     FOR point IN SELECT * FROM points where gid=id_point LOOP
-    PERFORM __nearestzonefinder(point.gid,700);
-    PERFORM __nearestisoipsefinder(point.gid,750);
+    PERFORM __nearestzonefinder(point.gid,800);
+    PERFORM __nearestisoipsefinder(point.gid,850);
     PERFORM __zonefragmentsfinder();
-    PERFORM __linearregressionfinder(point.gid,2);
+    PERFORM __linearregressionfinder(point.gid,2.5);
     PERFORM __landslidefinder(point.gid,50);
     PERFORM __contributionoflandslide(point.gid,50);
     END LOOP;
 
 	END;
 $$;
-

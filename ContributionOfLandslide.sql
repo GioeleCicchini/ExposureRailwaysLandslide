@@ -1,13 +1,14 @@
-CREATE OR REPLACE FUNCTION __ContributionOfLandslide (idstazione integer, dr INTEGER) RETURNS void
-	LANGUAGE plpgsql
+create function "__contributionoflandslide"(idstazione integer, dr double precision) returns void
+LANGUAGE plpgsql
 AS $$
-	DECLARE
+DECLARE
     hazard_zone RECORD;
     exposure FLOAT;
     Building RECORD;
     avg_area FLOAT;
     impfact FLOAT;
     landslide GEOMETRY;
+    distance FLOAT;
 
 
   BEGIN
@@ -28,9 +29,10 @@ AS $$
         exposure := exposure + (st_area(hazard_zone.geom) * hazard_zone.szk);
       ELSE
 
+        distance:=st_distance(Building.geom, hazard_zone.geom);
         SELECT geom INTO landslide FROM linearregression WHERE linearregression.id_zone = hazard_zone.id;
         impfact := (st_area(st_intersection(st_buffer(Building.geom,dr),landslide)))/(st_area(st_buffer(Building.geom,dr)));
-        exposure := (exposure + (st_area(hazard_zone.geom) * hazard_zone.szk))*impfact;
+        exposure := (exposure + ((st_area(hazard_zone.geom) * hazard_zone.szk)*impfact));
 
 
       END IF;
@@ -38,4 +40,4 @@ AS $$
     INSERT INTO exposure (Building_gid, name, geom, exposure) VALUES (Building.gid, Building.name, Building.geom, exposure/avg_area);
 
   END;
-$$
+$$;
