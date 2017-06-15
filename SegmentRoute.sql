@@ -1,5 +1,4 @@
-CREATE OR REPLACE FUNCTION "__SegmentRoute"(id_route INTEGER)
-  RETURNS VOID
+create or REPLACE function "__SegmentRoute"(id_route integer, step integer) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
@@ -15,15 +14,7 @@ DECLARE
   line         RECORD;
 
 BEGIN
-  passo:=10000;
-
-  CREATE TABLE IF NOT EXISTS sotto_tratte_DUMPED_TEMP (
-    id   SERIAL PRIMARY KEY,
-    km   INTEGER,
-    geom GEOMETRY,
-    name VARCHAR
-  );
-
+  passo:=step;
 
   CREATE TABLE IF NOT EXISTS sotto_tratte_temp (
     id   SERIAL PRIMARY KEY,
@@ -46,7 +37,7 @@ BEGIN
   i:=0;
   WHILE i < divisore LOOP
     km:=(i * passo) / 1000;
-    RAISE NOTICE 'length%', route_length;
+    --RAISE NOTICE 'length%', route_length;
     sts:=(i * passo) / route_length;
     ends:=((i + 1) * passo) / route_length;
 
@@ -54,8 +45,8 @@ BEGIN
     THEN
       ends:=1;
     END IF;
-    RAISE NOTICE 'segmentSTART%', sts;
-    RAISE NOTICE 'segmentEND%', ends;
+    --RAISE NOTICE 'segmentSTART%', sts;
+    --RAISE NOTICE 'segmentEND%', ends;
     geome:=st_linemerge(ST_LineSubString(route.geom, sts, ends));
 
     IF st_geometrytype(geome) = 'ST_MultiLineString'
@@ -63,9 +54,8 @@ BEGIN
 
       FOR line IN SELECT *
                   FROM (SELECT (ST_Dump(geome)).geom) AS a LOOP
-        RAISE NOTICE 'LINE%', line.geom;
+        --RAISE NOTICE 'LINE%', line.geom;
         INSERT INTO sotto_tratte_temp (km, geom, name) VALUES (km, line.geom, route.name);
-        INSERT INTO sotto_tratte_DUMPED_TEMP (km, geom, name) VALUES (km, line.geom, route.name);
       END LOOP;
 
     ELSE
@@ -77,5 +67,3 @@ BEGIN
 
 END;
 $$;
-
- 
