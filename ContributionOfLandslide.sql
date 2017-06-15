@@ -1,8 +1,8 @@
-create function "__contributionoflandslide"(idstazione integer, dr double precision) returns void
+create or REPLACE function "__contributionoflandslide"(idstazione integer, dr double precision) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
-    hazard_zone RECORD;
+    landslidezone RECORD;
     exposure FLOAT;
     Building RECORD;
     avg_area FLOAT;
@@ -23,16 +23,16 @@ DECLARE
     exposure := 0;
     SELECT * INTO Building FROM points WHERE gid = idstazione;
     SELECT avg(st_area(geom)) INTO avg_area FROM dataset;
-    FOR hazard_zone IN (SELECT * FROM hazardzones) LOOP
+    FOR landslidezone IN (SELECT * FROM landslidezones) LOOP
 
-      IF (ST_Intersects(Building.geom, hazard_zone.geom)) THEN
-        exposure := exposure + (st_area(hazard_zone.geom) * hazard_zone.szk);
+      IF (ST_Intersects(Building.geom, landslidezone.geom)) THEN
+        exposure := exposure + (st_area(landslidezone.geom) * landslidezone.szk);
       ELSE
 
-        distance:=st_distance(Building.geom, hazard_zone.geom);
-        SELECT geom INTO landslide FROM linearregression WHERE linearregression.id_zone = hazard_zone.id;
+        distance:=st_distance(Building.geom, landslidezone.geom);
+        SELECT geom INTO landslide FROM linearregression WHERE linearregression.id_zone = landslidezone.id;
         impfact := (st_area(st_intersection(st_buffer(Building.geom,dr),landslide)))/(st_area(st_buffer(Building.geom,dr)));
-        exposure := (exposure + ((st_area(hazard_zone.geom) * hazard_zone.szk)*impfact));
+        exposure := (exposure + ((st_area(landslidezone.geom) * landslidezone.szk)*impfact));
 
 
       END IF;

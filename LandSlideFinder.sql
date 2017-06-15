@@ -12,7 +12,7 @@ AS $$
       id_zone INTEGER
     );
 
-		CREATE TABLE HazardZones (
+		CREATE TABLE LandSlideZones (
 			id INTEGER,
 			geom geometry,
 			szk FLOAT
@@ -23,7 +23,7 @@ AS $$
 		FOR LandSlide_var IN (SELECT * FROM linearregression) LOOP
 			IF st_intersects(BuildingBuffer, LandSlide_var.geom) THEN
 				INSERT INTO LandSlide (geom, id_zone) VALUES (LandSlide_var.geom, LandSlide_var.id_zone);
-				INSERT INTO HazardZones (SELECT id, geom, szk FROM nearestzones WHERE id = LandSlide_var.id_zone);
+				INSERT INTO LandSlideZones (SELECT id, geom, szk FROM nearestzones WHERE id = LandSlide_var.id_zone);
 			END IF;
 		END LOOP;
 

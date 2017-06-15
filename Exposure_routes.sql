@@ -40,8 +40,8 @@ DECLARE
             DROP TABLE IF EXISTS nearestisoipses;
             DROP TABLE IF EXISTS zonefragments;
             DROP TABLE IF EXISTS linearregression;
-            DROP TABLE IF EXISTS hazardzones;
             DROP TABLE IF EXISTS landslide;
+            DROP TABLE IF EXISTS landslidezones;
 
                 PERFORM __nearestzonefinder(point.gid,800);
                 PERFORM __nearestisoipsefinder(point.gid,850);
