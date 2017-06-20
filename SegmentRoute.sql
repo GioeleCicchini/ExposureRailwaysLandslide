@@ -22,6 +22,12 @@ BEGIN
     geom GEOMETRY,
     name VARCHAR
   );
+  CREATE TABLE IF NOT EXISTS tratte(
+    id SERIAL PRIMARY KEY,
+    km INTEGER ,
+    id_route INTEGER REFERENCES railway_routes(gid),
+    geom GEOMETRY
+  );
 
   SELECT
     id,
@@ -56,10 +62,12 @@ BEGIN
                   FROM (SELECT (ST_Dump(geome)).geom) AS a LOOP
         --RAISE NOTICE 'LINE%', line.geom;
         INSERT INTO sotto_tratte_temp (km, geom, name) VALUES (km, line.geom, route.name);
+
       END LOOP;
 
     ELSE
       INSERT INTO sotto_tratte_temp (km, geom, name) VALUES (km, geome, route.name);
+
     END IF;
 
     i:=i + 1;

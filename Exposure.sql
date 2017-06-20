@@ -41,5 +41,3 @@ DECLARE
     PERFORM __cleartables();
 	END;
 $$;
-
-SELECT __exposure(2);
