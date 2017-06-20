@@ -15,9 +15,8 @@ DECLARE
     CREATE TABLE IF NOT EXISTS exposure (
       id SERIAL PRIMARY KEY ,
 			Building_gid INTEGER,
-      name varchar,
-			geom geometry,
-			exposure FLOAT
+			exposure FLOAT,
+      FOREIGN KEY (Building_gid) REFERENCES railway_stations(gid)
 		);
 
     exposure := 0;
@@ -37,7 +36,7 @@ DECLARE
 
       END IF;
     END LOOP;
-    INSERT INTO exposure (Building_gid, name, geom, exposure) VALUES (Building.gid, Building.name, Building.geom, exposure/avg_area);
+    INSERT INTO exposure (Building_gid, exposure) VALUES (Building.gid, exposure/avg_area);
 
   END;
 $$;
