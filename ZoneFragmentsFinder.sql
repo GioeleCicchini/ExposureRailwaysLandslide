@@ -1,8 +1,7 @@
-CREATE OR REPLACE FUNCTION __ZoneFragmentsFinder () RETURNS void
-	LANGUAGE plpgsql
+create function "__zonefragmentsfinder"() returns void
+LANGUAGE plpgsql
 AS $$
-
-	DECLARE
+DECLARE
     NearestZone RECORD;
     PrimaIsoipse RECORD ;
     TempFragment RECORD;
@@ -72,4 +71,4 @@ AS $$
 
 
 	END;
-$$
+$$;
