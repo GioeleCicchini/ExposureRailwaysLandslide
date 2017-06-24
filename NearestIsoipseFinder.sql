@@ -1,7 +1,7 @@
-CREATE OR REPLACE FUNCTION __NearestIsoipseFinder (stationid integer,dr integer) RETURNS void
-	LANGUAGE plpgsql
+create function "__nearestisoipsefinder"(stationid integer, dr integer) returns void
+LANGUAGE plpgsql
 AS $$
-	DECLARE
+DECLARE
     station RECORD;
     hazardArea geometry;
   BEGIN
@@ -33,4 +33,4 @@ AS $$
 
 
 	END;
-$$
+$$;

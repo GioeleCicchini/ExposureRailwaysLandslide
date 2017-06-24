@@ -3,36 +3,43 @@ LANGUAGE plpgsql
 AS $$
 DECLARE
     point RECORD;
-    route RECORD;
+    route_segment RECORD;
     points INTEGER;
     iterator INTEGER;
     divisor INTEGER;
     lastexposure RECORD;
+    startid INTEGER;
 
   BEGIN
-      DROP TABLE IF EXISTS route_points;
-      DROP TABLE IF EXISTS sotto_tratte_temp;
+
+      DROP TABLE IF EXISTS current_route_segments;
 
       PERFORM "__SegmentRoute"(id_route,1500);
 
-      FOR route IN SELECT * FROM sotto_tratte_temp LOOP
-          PERFORM "__GenerateRoutePoints"(route.id,300);
+      FOR route_segment IN SELECT * FROM current_route_segments LOOP
+          PERFORM "__GenerateRoutePoints"(route_segment.gid,300);
       END LOOP;
 
       DROP TABLE IF EXISTS points;
-      CREATE TABLE  points AS (SELECT * FROM route_points ORDER BY gid ASC);
-      DROP TABLE IF EXISTS route_points;
+      CREATE TABLE  points AS (SELECT * FROM current_route_points ORDER BY gid ASC);
+      DROP TABLE IF EXISTS current_route_points;
 
       SELECT COUNT(*) FROM points INTO points;
       SELECT COUNT(*) FROM points WHERE km=0 INTO divisor;
+      SELECT gid FROM points LIMIT 1 INTO startid;
       iterator:=1;
       RAISE NOTICE 'TOTAL POINTS %',points;
       FOR point IN SELECT * FROM points LOOP
         RAISE NOTICE 'POINT NUMBER %',iterator;
-        IF (point.gid-1)%divisor=0 AND iterator!=1 THEN
+        IF (point.gid-startid)%divisor=0 AND iterator!=1 THEN
           RAISE NOTICE 'JUMPED EXPOSURE %',iterator;
           SELECT * FROM exposure ORDER BY id DESC LIMIT 1 INTO lastexposure;
-          INSERT INTO exposure (building_gid, name, geom, exposure) VALUES (point.gid, point.name, point.geom, lastexposure.exposure);
+
+        --  SELECT gid FROM route_points WHERE route_points.geom=point.geom ORDER BY gid DESC LIMIT 1 INTO pointid;
+          RAISE NOTICE 'ID POINT %',point.gid;
+          --INSERT INTO exposure (building_gid, name, geom, exposure) VALUES (point.gid, point.name, point.geom, lastexposure.exposure);
+
+          INSERT INTO exposure (point_gid, exposure) VALUES (point.gid, lastexposure.exposure);
 
         ELSE
 
@@ -40,8 +47,8 @@ DECLARE
             DROP TABLE IF EXISTS nearestisoipses;
             DROP TABLE IF EXISTS zonefragments;
             DROP TABLE IF EXISTS linearregression;
-            DROP TABLE IF EXISTS landslide;
             DROP TABLE IF EXISTS landslidezones;
+            DROP TABLE IF EXISTS landslide;
 
                 PERFORM __nearestzonefinder(point.gid,800);
                 PERFORM __nearestisoipsefinder(point.gid,850);
@@ -56,15 +63,12 @@ DECLARE
 
       END LOOP;
 
+     CREATE TABLE IF NOT EXISTS exposure_route_points (pointid INTEGER PRIMARY KEY REFERENCES route_points(gid) ,exposure FLOAT);
+     CREATE TABLE IF NOT EXISTS exposure_routes (routeid INTEGER PRIMARY KEY REFERENCES route_segments(gid),exposure FLOAT);
 
-     CREATE TABLE IF NOT EXISTS exposure_routes ( gid serial PRIMARY KEY,km INTEGER, geom Geometry, name varchar,exposure FLOAT);
-     CREATE TABLE IF NOT EXISTS exposure_route_points ( gid serial PRIMARY KEY,km INTEGER, geom Geometry, name varchar,exposure FLOAT);
-
-     INSERT INTO exposure_routes (km,geom,name,exposure) SELECT ro.km, ro.routegeom, exposure.name,SUM (exposure.exposure) as exposure FROM exposure INNER JOIN points as ro ON exposure.building_gid=ro.gid GROUP BY exposure.name , ro.routegeom, ro.km;
-     INSERT INTO exposure_route_points (km,geom,name,exposure) SELECT ro.km, ro.geom, exposure.name,exposure.exposure FROM exposure INNER JOIN points as ro ON exposure.building_gid=ro.gid;
+     INSERT INTO exposure_route_points (pointid,exposure) SELECT point_gid,exposure FROM exposure;
+     INSERT INTO exposure_routes (routeid,exposure) SELECT t.gid, AVG(e.exposure) FROM route_points as p INNER JOIN exposure as e ON p.gid=e.point_gid INNER JOIN route_segments as t ON t.gid=p.segmentid GROUP BY t.gid;
 
      PERFORM __cleartables();
 	END;
 $$;
-
-SELECT __exposure_routes(2)

@@ -9,24 +9,25 @@ DECLARE
   i            INTEGER;
   sts          FLOAT;
   ends         FLOAT;
-  km           INTEGER;
+  km           real;
   geome        GEOMETRY;
   line         RECORD;
 
 BEGIN
   passo:=step;
 
-  CREATE TABLE IF NOT EXISTS sotto_tratte_temp (
-    id   SERIAL PRIMARY KEY,
-    km   INTEGER,
+  CREATE TABLE IF NOT EXISTS route_segments (
+    gid   SERIAL PRIMARY KEY,
+    route_id INTEGER REFERENCES railway_routes(gid),
+    km   real,
+    geom GEOMETRY
+  );
+
+  CREATE TABLE IF NOT EXISTS current_route_segments (
+    gid   SERIAL PRIMARY KEY,
+    km   real,
     geom GEOMETRY,
     name VARCHAR
-  );
-  CREATE TABLE IF NOT EXISTS tratte(
-    id SERIAL PRIMARY KEY,
-    km INTEGER ,
-    id_route INTEGER REFERENCES railway_routes(gid),
-    geom GEOMETRY
   );
 
   SELECT
@@ -42,7 +43,8 @@ BEGIN
 
   i:=0;
   WHILE i < divisore LOOP
-    km:=(i * passo) / 1000;
+    km:=(i * passo) / 1000::real;
+    RAISE NOTICE 'kilometro %',km;
     --RAISE NOTICE 'length%', route_length;
     sts:=(i * passo) / route_length;
     ends:=((i + 1) * passo) / route_length;
@@ -57,17 +59,17 @@ BEGIN
 
     IF st_geometrytype(geome) = 'ST_MultiLineString'
     THEN
-
+      --IF THE MERGED GEOMETRY IS A MULTILINESTRING WE MUST DUMP IT TO OBTAIN LINESTRINGS
       FOR line IN SELECT *
                   FROM (SELECT (ST_Dump(geome)).geom) AS a LOOP
         --RAISE NOTICE 'LINE%', line.geom;
-        INSERT INTO sotto_tratte_temp (km, geom, name) VALUES (km, line.geom, route.name);
-
+        INSERT INTO current_route_segments (km, geom, name) VALUES (km, line.geom, route.name);
+        INSERT INTO route_segments (km,route_id,geom) VALUES (km,route.id,line.geom);
       END LOOP;
 
     ELSE
-      INSERT INTO sotto_tratte_temp (km, geom, name) VALUES (km, geome, route.name);
-
+      INSERT INTO current_route_segments (km, geom, name) VALUES (km, geome, route.name);
+      INSERT INTO route_segments (km,route_id,geom) VALUES (km,route.id,geome);
     END IF;
 
     i:=i + 1;

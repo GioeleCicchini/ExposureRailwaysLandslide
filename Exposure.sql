@@ -10,15 +10,12 @@ DECLARE
     DROP TABLE IF EXISTS nearestisoipses;
     DROP TABLE IF EXISTS zonefragments;
     DROP TABLE IF EXISTS linearregression;
+    DROP TABLE IF EXISTS hazardzones;
     DROP TABLE IF EXISTS landslide;
-    DROP TABLE IF EXISTS landslidezones;
     DROP TABLE IF EXISTS exposure_stations;
 
         CREATE TABLE IF NOT EXISTS exposure_stations(
-      id SERIAL PRIMARY KEY ,
-			Building_gid INTEGER,
-      name varchar,
-			geom geometry,
+			Building_gid INTEGER PRIMARY KEY REFERENCES railway_stations(gid),
 			exposure FLOAT
 		);
 
@@ -35,7 +32,7 @@ DECLARE
     PERFORM __contributionoflandslide(point.gid,50);
 
     SELECT * FROM exposure LIMIT 1 INTO exposure;
-    INSERT INTO exposure_stations (Building_gid, name, geom, exposure) VALUES (exposure.id, exposure.name, exposure.geom, exposure.exposure);
+    INSERT INTO exposure_stations (Building_gid, exposure) VALUES (exposure.id, exposure.exposure);
     END LOOP;
 
     PERFORM __cleartables();

@@ -1,7 +1,7 @@
-CREATE OR REPLACE FUNCTION __NearestZoneFinder (stationid integer, r integer) RETURNS void
-	LANGUAGE plpgsql
+create or REPLACE function "__nearestzonefinder"(stationid integer, r integer) returns void
+LANGUAGE plpgsql
 AS $$
-	DECLARE
+DECLARE
     station RECORD;
     particella RECORD;
     hazardArea geometry;
@@ -13,7 +13,7 @@ AS $$
 
     hazardArea := (SELECT ST_Buffer(station.geom, r));
 
-    FOR particella IN SELECT * FROM dataset LOOP
+    FOR particella IN SELECT * FROM zones LOOP
       IF ST_Intersects(hazardArea, particella.geom) THEN
         INSERT INTO hotspottmp (id_station, geom, szk) VALUES(station.gid, ST_Intersection(hazardArea, particella.geom), particella.szk );
       END IF;
@@ -24,4 +24,4 @@ AS $$
 
 
 	END;
-$$
+$$;

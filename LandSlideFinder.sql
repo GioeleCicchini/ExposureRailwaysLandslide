@@ -1,7 +1,7 @@
-CREATE OR REPLACE FUNCTION __LandSlideFinder (stationid integer, dr INTEGER) RETURNS void
-	LANGUAGE plpgsql
+create function "__landslidefinder"(stationid integer, dr integer) returns void
+LANGUAGE plpgsql
 AS $$
-	DECLARE
+DECLARE
 		LandSlide_var RECORD;
 		BuildingBuffer geometry;
   BEGIN
@@ -28,4 +28,4 @@ AS $$
 		END LOOP;
 
 	END;
-$$
+$$;
