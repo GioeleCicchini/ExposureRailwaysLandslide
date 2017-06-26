@@ -1,4 +1,4 @@
-create function "__nearestisoipsefinder"(stationid integer, dr integer) returns void
+create or replace function "__nearestisoipsefinder"(id_point integer, dr integer) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
@@ -12,7 +12,7 @@ DECLARE
     elevation INTEGER
     );
 
-    SELECT * INTO station FROM points WHERE gid=stationid;
+    SELECT * INTO station FROM points WHERE gid=id_point;
     hazardArea := (SELECT ST_Buffer(station.geom, dr));
 
     --- intersezione tra hazardArea e Isoipse

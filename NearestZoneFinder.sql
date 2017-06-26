@@ -1,4 +1,4 @@
-create or REPLACE function "__nearestzonefinder"(stationid integer, r integer) returns void
+create or REPLACE function "__nearestzonefinder"(id_point integer, r integer) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
@@ -9,7 +9,7 @@ DECLARE
   BEGIN
 
     CREATE TEMP TABLE hotspottmp ( id serial PRIMARY KEY, id_station INTEGER, geom Geometry, szk FLOAT  ) ON COMMIT DROP;
-    SELECT * INTO station FROM points where gid = stationid;
+    SELECT * INTO station FROM points where gid = id_point;
 
     hazardArea := (SELECT ST_Buffer(station.geom, r));
 

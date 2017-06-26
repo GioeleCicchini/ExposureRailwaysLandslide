@@ -1,4 +1,4 @@
-create function "__linearregressionfinder"(stationid integer, pdiv double precision) returns void
+create function "__linearregressionfinder"(pdiv double precision) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
