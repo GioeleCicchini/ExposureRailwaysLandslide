@@ -12,7 +12,6 @@ DECLARE
     DROP TABLE IF EXISTS linearregression;
     DROP TABLE IF EXISTS hazardzones;
     DROP TABLE IF EXISTS landslide;
-    DROP TABLE IF EXISTS exposure_stations;
 
         CREATE TABLE IF NOT EXISTS exposure_stations(
 			Building_gid INTEGER PRIMARY KEY REFERENCES railway_stations(gid),
@@ -32,7 +31,7 @@ DECLARE
     PERFORM __contributionoflandslide(point.gid,50);
 
     SELECT * FROM exposure LIMIT 1 INTO exposure;
-    INSERT INTO exposure_stations (Building_gid, exposure) VALUES (exposure.id, exposure.exposure);
+    INSERT INTO exposure_stations (Building_gid, exposure) VALUES (point.gid, exposure.exposure);
     END LOOP;
 
     PERFORM __cleartables();
