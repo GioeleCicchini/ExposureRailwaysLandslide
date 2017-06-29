@@ -8,7 +8,7 @@ DECLARE
     DROP TABLE IF EXISTS nearestzones;
     DROP TABLE IF EXISTS nearestisoipses;
     DROP TABLE IF EXISTS zonefragments;
-    DROP TABLE IF EXISTS linearregression;
+    DROP TABLE IF EXISTS bufferedlinearregression;
     DROP TABLE IF EXISTS landslidezones;
     DROP TABLE IF EXISTS landslide;
     DROP TABLE IF EXISTS exposure;

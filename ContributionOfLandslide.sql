@@ -1,4 +1,4 @@
-create or REPLACE function "__contributionoflandslide"(id_point integer, l double precision) returns void
+create or REPLACE function "__contributionoflandslide"(pointid integer, dr double precision) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
@@ -18,7 +18,7 @@ DECLARE
 		);
 
     exposure := 0;
-    SELECT * INTO CurrentPoint FROM points WHERE gid = id_point;
+    SELECT * INTO CurrentPoint FROM points WHERE gid = pointid;
     SELECT avg(st_area(geom)) INTO avg_area FROM zones;
     FOR landslidezone IN (SELECT * FROM landslidezones) LOOP
 
@@ -27,8 +27,8 @@ DECLARE
       ELSE
 
         distance:=st_distance(CurrentPoint.geom, landslidezone.geom);
-        SELECT geom INTO landslide FROM linearregression WHERE linearregression.id_zone = landslidezone.id;
-        impfact := (st_area(st_intersection(st_buffer(CurrentPoint.geom,l),landslide)))/(st_area(st_buffer(CurrentPoint.geom,l)));
+        SELECT geom INTO landslide FROM bufferedlinearregression WHERE bufferedlinearregression.id_zone = landslidezone.id;
+        impfact := (st_area(st_intersection(st_buffer(CurrentPoint.geom,dr),landslide)))/(st_area(st_buffer(CurrentPoint.geom,dr)));
         exposure := (exposure + ((st_area(landslidezone.geom) * landslidezone.szk)*impfact));
 
 

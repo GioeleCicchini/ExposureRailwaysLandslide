@@ -9,7 +9,7 @@ DECLARE
     DROP TABLE IF EXISTS nearestzones;
     DROP TABLE IF EXISTS nearestisoipses;
     DROP TABLE IF EXISTS zonefragments;
-    DROP TABLE IF EXISTS linearregression;
+    DROP TABLE IF EXISTS bufferedlinearregression;
     DROP TABLE IF EXISTS hazardzones;
     DROP TABLE IF EXISTS landslide;
 
@@ -26,7 +26,7 @@ DECLARE
     PERFORM __nearestzonefinder(point.gid,800);
     PERFORM __nearestisoipsefinder(point.gid,850);
     PERFORM __zonefragmentsfinder();
-    PERFORM __linearregressionfinder(point.gid,2.5);
+    PERFORM __bufferedlinearregressionfinder(point.gid,2.5);
     PERFORM __landslidefinder(point.gid,50);
     PERFORM __contributionoflandslide(point.gid,50);
 

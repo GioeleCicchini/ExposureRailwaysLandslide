@@ -1,4 +1,4 @@
-create function "__linearregressionfinder"(pdiv double precision) returns void
+create function "__bufferedlinearregressionfinder"(stationid integer, pdiv double precision) returns void
 LANGUAGE plpgsql
 AS $$
 DECLARE
@@ -11,7 +11,7 @@ DECLARE
     line_buffer_size FLOAT;
   BEGIN
 
-    CREATE TABLE LinearRegression (
+    CREATE TABLE BufferedLinearRegression (
       id SERIAL,
       geom geometry,
       id_zone INTEGER
@@ -67,7 +67,7 @@ DECLARE
       INSERT INTO point SELECT st_makepoint(x,y);
 
       IF (SELECT count(centroid_zoneFragments.centroid_fragments) FROM centroid_zoneFragments) > 3 THEN
-         INSERT INTO LinearRegression(geom, id_zone) VALUES ((SELECT st_buffer(st_makeline(st_setsrid(point.geom,3004)), line_buffer_size) FROM point), id_zone_var);
+         INSERT INTO BufferedLinearRegression(geom, id_zone) VALUES ((SELECT st_buffer(st_makeline(st_setsrid(point.geom,3004)), line_buffer_size) FROM point), id_zone_var);
       END IF;
 
 
